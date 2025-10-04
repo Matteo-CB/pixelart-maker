@@ -26,11 +26,12 @@ const PixelArtMaker = () => {
   };
   return (
     <div className="flex flex-col justify-center items-center gap-5">
-      <div className="flex gap-3">
+      <div className="flex gap-5 md:gap-3 flex-col items-center md:flex-row">
         <label htmlFor="pickGrid">Pick grid size:</label>
         <input
           id="pickGrid"
           type="number"
+          className=" py-1 px-2 rounded-sm border-2"
           value={gridSize}
           onChange={(e) => handleGridChange(+e.target.value)}
         />
@@ -44,7 +45,7 @@ const PixelArtMaker = () => {
         />
       </div>
       <div
-        className="grid w-[30rem] h-[30rem] relative border border-neutral-300 rounded-lg"
+        className="grid w-[20rem] md:w-[30rem] md:h-[30rem] h-[20rem] relative border border-neutral-300 rounded-lg"
         style={{
           gridTemplateColumns: `repeat(${gridSize}, 1fr)`,
         }}
