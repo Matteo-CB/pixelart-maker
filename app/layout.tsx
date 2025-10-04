@@ -27,7 +27,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-F5LCXNSE29" />
-      <Script id="google-analytics" />
+
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-F5LCXNSE29');
+        `}
+      </Script>
       <body>{children}</body>
     </html>
   );
