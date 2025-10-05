@@ -26,6 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <title>Pixel Art Maker</title>
+      </Head>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-F5LCXNSE29" />
 
       <Script id="google-analytics">
